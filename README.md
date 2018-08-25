@@ -1,2 +1,2 @@
 # amauta
-Sistema de cálculo de rutas
+Sistema de cálculo de rutas para servicios escolares
