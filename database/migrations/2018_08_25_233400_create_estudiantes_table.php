@@ -18,6 +18,8 @@ class CreateEstudiantesTable extends Migration
             $table->string('nombre');
             $table->string('apellido');
             $table->decimal('lat',10,8);
+            $table->decimal('lng',10,8);
+            $table->text('direccion')->nullable();
             $table->timestamps();
         });
     }
@@ -29,6 +31,6 @@ class CreateEstudiantesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('estudiantes');
+        Schema::dropIfExists('estudiantes'); 
     }
 }
