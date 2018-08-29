@@ -15,6 +15,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/estudiantes/create','EstudiantesController@create');
+Route::post('estudiantes', 'EstudiantesController@store');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
