@@ -14,7 +14,9 @@ class EstudiantesController extends Controller
      */
     public function index()
     {
-        //
+        $estudiantes = Estudiante::all();
+
+        return view('estudiantes.index', compact('estudiantes'));
     }
 
     /**
@@ -35,17 +37,13 @@ class EstudiantesController extends Controller
      */
     public function store(Request $request)
     {        
-        /*        
-        $estudiante =  new Estudiante;
-
-        $estudiante->nombre = request('nombre');
-        $estudiante->apellido = request('apellido');
-        $estudiante->lat = request('lat');
-        $estudiante->lng = request('lng');
-
-        $estudiante->save();
-        */
-
+        
+        $this->validate(request(),[
+            'nombre' => 'required',
+            'apellido' => 'required',
+            'lat' => 'required',
+            'lng' => 'required'
+        ]);
 
         Estudiante::create(request(['nombre','apellido','lat','lng']));
 
@@ -59,9 +57,9 @@ class EstudiantesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Estudiante $estudiante)
     {
-        //
+        return view('estudiantes.show', compact('estudiante'));
     }
 
     /**
@@ -70,9 +68,9 @@ class EstudiantesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
-    {
-        //
+    public function edit(Estudiante $estudiante)
+    {        
+        return view('estudiantes.edit',compact('estudiante'));
     }
 
     /**
@@ -84,7 +82,23 @@ class EstudiantesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+                
+        $this->validate(request(),[
+            'nombre' => 'required',
+            'apellido' => 'required',
+            'lat' => 'required',
+            'lng' => 'required'
+        ]);
+       $estudiante = Estudiante::find($id); 
+       $estudiante->nombre = $request->get('nombre');
+       $estudiante->apellido = $request->get('apellido');
+       $estudiante->lat = $request->get('lat');
+       $estudiante->lng = $request->get('lng');
+
+       $estudiante->save();
+       
+       return redirect('/estudiantes');
+        
     }
 
     /**
@@ -95,6 +109,9 @@ class EstudiantesController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $estudiante = Estudiante::find($id);
+        $estudiante->delete();
+        return redirect('/estudiantes')->with('success','Estudiante eliminado');
+        
     }
 }

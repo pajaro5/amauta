@@ -1,27 +1,30 @@
 @extends('layouts.master')
 @section('content')
-    <form action="/estudiantes" method="POST">
+    <form action="{{url('estudiantes')}}" method="POST">
         {{ csrf_field() }}
         <div class="col-md-6 mb-3">
             <label for="nombre">Nombre</label>
-            <input type="text" class="form-control" name="nombre" id="nombre" placeholder="" value="" required>
-            <div class="invalid-feedback">
-            Debe ingresar el nombre
-            </div>
+            <input type="text" class="form-control" name="nombre" id="nombre" placeholder="" value="" required>            
         </div>
         <div class="col-md-6 mb-3">
             <label for="apellido">Apellido</label>
-            <input type="text" class="form-control" name="apellido" id="apellido" placeholder="" value="" required>
-            <div class="invalid-feedback">
-            Debe ingresar el apellido
-            </div>
+            <input type="text" class="form-control" name="apellido" id="apellido" placeholder="" value="" required>            
         </div>
-        <input type="hidden" id="lat" name="lat" value="">
-        <input type="hidden" id="lng" name="lng" value="">
+        <input type="hidden" id="lat" name="lat" value="" required>
+        <input type="hidden" id="lng" name="lng" value="" required>
         <div class="col-md-8 mb-3" id="mapa" style="height:400px;">
         </div>
-        <button type="submit" class="btn btn-info">Guardar Estudiante</button>
-        </form>
+        <div class="form-group">
+            <button type="submit" class="btn btn-info">Guardar Estudiante</button>
+        </div>
+    
+        @include('layouts.errors')
+        
+
+    </form>
+
+        
+
 @endsection
 
 @section('customJS')
