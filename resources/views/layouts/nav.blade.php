@@ -15,7 +15,7 @@
                             
                         </ul>
                     </li>
-                    <li class="nav-label">Catálogos</li>
+                    <li class="nav-label">Datos de entrada</li>
                     <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-address-book"></i><span class="hide-menu">Estudiantes</span></a>
                         <ul aria-expanded="false" class="collapse">
                             <li><a href={{ url('/estudiantes/create') }}>Registrar</a></li>                                
