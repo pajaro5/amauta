@@ -19,7 +19,13 @@
                     <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-address-book"></i><span class="hide-menu">Estudiantes</span></a>
                         <ul aria-expanded="false" class="collapse">
                             <li><a href={{ url('/estudiantes/create') }}>Registrar</a></li>                                
-                            <li><a href="email-inbox.html">Ver todos</a></li>
+                            <li><a href={{ url('/estudiantes/') }}>Ver estudiantes registrados</a></li>
+                        </ul>
+                    </li>
+                    <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-bus"></i><span class="hide-menu">Flota escolar</span></a>
+                        <ul aria-expanded="false" class="collapse">
+                            <li><a href={{ url('/vehiculos/create') }}>Registrar</a></li>                                
+                            <li><a href={{ url('/vehiculos/') }}>Ver flota disponible</a></li>
                         </ul>
                     </li>                        
                 </ul>
