@@ -26,7 +26,11 @@ Route::patch('/estudiantes/{estudiantes}','EstudiantesController@update');
 
 //Vehículos
 Route::get('/vehiculos','VehiculosController@index');
-
+Route::get('/vehiculos/create','VehiculosController@create');
+Route::post('/vehiculos','VehiculosController@store');
+Route::get('/vehiculos/{vehiculo}/edit','VehiculosController@edit');
+Route::delete('/vehiculos/{vehiculo}','VehiculosController@destroy');
+Route::patch('vehiculos/{vehiculo}','VehiculosController@update');
 
 Auth::routes();
 

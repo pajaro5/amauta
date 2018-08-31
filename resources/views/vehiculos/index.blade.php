@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('content')
-    <h1>Flota de vehículos disponible</h1>
+    <h1>Flota disponible</h1>
     <h4 class="card-title">Exportación de datos</h4>
     <h6 class="card-subtitle">Los datos pueden ser exportados: Portapapeles, CSV, Excel, PDF & Imprimir</h6>
     <div class="table-responsive m-t-40">
