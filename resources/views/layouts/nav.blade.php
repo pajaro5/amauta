@@ -24,8 +24,8 @@
                     </li>
                     <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-bus"></i><span class="hide-menu">Flota escolar</span></a>
                         <ul aria-expanded="false" class="collapse">
-                            <li><a href={{ url('/estudiantes/create') }}>Registrar</a></li>                                
-                            <li><a href={{ url('/estudiantes/') }}>Ver flota disponible</a></li>
+                            <li><a href={{ url('/vehiculos/create') }}>Registrar</a></li>                                
+                            <li><a href={{ url('/vehiculos/') }}>Ver flota disponible</a></li>
                         </ul>
                     </li>                        
                 </ul>
