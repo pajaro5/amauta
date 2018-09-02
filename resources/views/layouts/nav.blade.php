@@ -1,16 +1,18 @@
+
 <div class="left-sidebar">
         <!-- Sidebar scroll-->
         <div class="scroll-sidebar">
             <!-- Sidebar navigation-->
             <nav class="sidebar-nav">
                 <ul id="sidebarnav">
-                    <li class="nav-devider"></li>                                     
+                    <li class="nav-devider"></li>  
                     <li class="nav-label">Datos de entrada</li>
-                    <li><a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-university"></i><span class="hide-menu">Centro Educativo</span></a>
+                    <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-tachometer"></i><span class="hide-menu">Centro educativo </span></a>
                         <ul aria-expanded="false" class="collapse">
-                            <li><a href={{ url('/estudiantes/create') }}>Datos generales</a></li>                                                           
+                            <li><a href={{ url('/escuelas') }}>Datos generales </a></li>
                         </ul>
-                    </li>
+                    </li>                                   
+                    
                     <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-address-book"></i><span class="hide-menu">Estudiantes</span></a>
                         <ul aria-expanded="false" class="collapse">
                             <li><a href={{ url('/estudiantes/create') }}>Registrar</a></li>                                
@@ -39,3 +41,5 @@
         </div>
         <!-- End Sidebar scroll-->
     </div>
+
+

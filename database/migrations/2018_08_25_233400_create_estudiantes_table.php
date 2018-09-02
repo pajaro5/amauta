@@ -17,8 +17,8 @@ class CreateEstudiantesTable extends Migration
             $table->increments('id');
             $table->string('nombre');
             $table->string('apellido');
-            $table->decimal('lat',10,8);
-            $table->decimal('lng',10,8);
+            $table->decimal('lat',10,17);
+            $table->decimal('lng',10,17);
             $table->text('direccion')->nullable();
             $table->timestamps();
         });

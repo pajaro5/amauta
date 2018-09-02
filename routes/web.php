@@ -32,6 +32,9 @@ Route::get('/vehiculos/{vehiculo}/edit','VehiculosController@edit');
 Route::delete('/vehiculos/{vehiculo}','VehiculosController@destroy');
 Route::patch('vehiculos/{vehiculo}','VehiculosController@update');
 
+//Escuela 
+Route::get('/escuelas','EscuelasController@index');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
