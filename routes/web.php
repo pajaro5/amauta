@@ -35,6 +35,10 @@ Route::patch('vehiculos/{vehiculo}','VehiculosController@update');
 //Escuela 
 Route::get('/escuelas','EscuelasController@index');
 
+//Solver Rutas
+//Route::get('/rutas','RutasController@index');
+Route::get('/rutas/create','RutasController@create');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
