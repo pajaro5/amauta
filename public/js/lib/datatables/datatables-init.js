@@ -1,7 +1,10 @@
 $(document).ready(function() {
+    
+
         $('#myTable').DataTable();
         $(document).ready(function() {
-            var table = $('#example').DataTable({
+            
+            var table = $('#example').DataTable({                
                 "columnDefs": [{
                     "visible": false,
                     "targets": 2

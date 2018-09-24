@@ -27,12 +27,9 @@
                     </li>  
                     <li class="nav-label">Amauta Solver</li>   
                     <li> <a href="#" class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-tachometer"></i><span class="hide-menu">Rutero</span></a>
-                        <ul aria-expanded="false" class="collapse">
-                            <li><a href="email-inbox.html">Estudiantes</a></li>
-                            <li><a href="email-compose.html">Flota</a></li>
-                            <li><a href="email-read.html">Reglas</a></li>
-                            <li><a href="email-read.html">Calcular rutas</a></li>
-                            
+                        <ul aria-expanded="false" class="collapse">                            
+                            <li><a href={{ url('/rutas/create') }}>Calcular rutas</a></li>
+                            <li><a href={{ url('/rutas/tsp') }}>Calcular TSP</a></li>
                         </ul>
                     </li>                      
                 </ul>

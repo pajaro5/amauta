@@ -36,8 +36,8 @@ Route::patch('vehiculos/{vehiculo}','VehiculosController@update');
 Route::get('/escuelas','EscuelasController@index');
 
 //Solver Rutas
-//Route::get('/rutas','RutasController@index');
 Route::get('/rutas/create','RutasController@create');
+Route::get('/rutas/tsp','RutasController@tsp');
 
 Auth::routes();
 
